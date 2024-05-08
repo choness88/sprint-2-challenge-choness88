@@ -20,11 +20,15 @@ The grid consists of a 3x3 array of strings, where:
 
 Example:
 ```javascript
-[ 
-  ["🟥", "🟦", "🟥"],
-  ["🟦", "🟥", "🟥"],
-  ["🟥", "🟦", "🟦"]
+[   3     2     1
+  ["🟥", "🟦", "🟥"],3
+  ["🟦", "🟥", "🟥"],2
+  ["🟥", "🟦", "🟦"] 1
 ]
+
+([["🟦","🟦","🟥"],
+  ["🟦","🟦","🟦"],
+  ["🟦","🟦","🟥"]],1,1)
 ```
 
 The grid is interpreted with `x` and `y` coordinates ranging from 1 to 3.

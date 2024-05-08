@@ -19,6 +19,7 @@ function normalizePhoneNumber(num)
 
 #### Example 1
 ```javascript
+
 let result = normalizePhoneNumber("9876543210");
 console.log(result);
 ```
