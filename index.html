@@ -27,23 +27,23 @@
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
 
-      
+
       if ((y < 1 || y > 3) || (x < 1 || x > 3)) {
         return "invalid coordinates";
       }
 
-      if (grid[y -1][x -1] === "🟥") {
+      if (grid[y - 1][x - 1] === "🟥") {
         return "🟥 💀";
       }
 
-      if (grid[y -1][x -1] === "🟦") {
+      if (grid[y - 1][x - 1] === "🟦") {
         return "🟦 🥳";
       }
 
     }
 
 
-    
+
     // 👉 CHALLENGE 3
     function booleanize(obj) {
 
@@ -66,14 +66,36 @@
 
       }
 
-      return obj  
+      return obj
 
     }
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
 
+      let newText = []
+      let splitText = text.split(' ')
+
+      for (let i in splitText) {
+
+        let word = splitText[i]
+        if (!forbidden.includes(word)) {
+          newText.push(word)
+        }
+
+        else {
+          newText.push('x'.repeat(word.length))
+        }
+
+      }
+
+      return newText.join(" ")
+      console.log(newText)
+
     }
+
+
+
 
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
